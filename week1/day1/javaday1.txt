@@ -1,0 +1,99 @@
+Today's Agenda
+==============
+9.00 to 10.15      Introduction to Java,Class and Main method
+10.15 to 10.30     classroom
+10.30 to 10.40 	   Break
+10.40 to 11.20	   Datatypes and Variables
+11.20 to 11.40     Classroom
+11.40 to 11.45	   Break
+11.45 to 12.45     Method and Object
+12.45 to 1.00      Classroom
+1.00  to 1.15	   Recap
+
+
+IDE -->platform to write the code
+Integrated Development Environment
+
+JDk -->java development Kit -->to develop java application
+JRE-->Java runtime Environment-->to run your code
+JVM -->java virtual machine-->memory space
+
+
+
+normal characters-->Machine languauge-->binaries 0,1
+
+
+class-->workspace to write logic
+     --->like a testcase
+	 -->blueprint/template
+
+
+
+
+void -->nothing
+
+
+
+ 
+Create a Project
+ -->right click -->src/main/java-->click new 
+ -->package-->
+ 
+Package->organize the code
+-->starts with lowercase
+-->no spaces
+
+
+To Create a class 
+ rightclick package-->click new-->class
+naming Convention--> PascalNotation
+CarBrand
+
+created a main method-->entry point for execution
+
+
+Class-->blueprint/template for an object->define the structure of object
+
+Class Contains-->Information about object
+			-->action/function of the object
+=========================================================
+
+Primitive and Non Primitive Datatype
+
+boolean-->true/false
+numbers
+=======
+short
+int
+long
+float
+double
+
+char-->one single character
+	 
+Wrapper class-->collection of data based on the dataype and its size
+
+Non Primitive Datatype
+======================
+String-->char sequence-->collection of characters--> word -->alphanumeric ,special character
+
+Method -->action/verification
+
+Method signature
+================
+main()-->entry point
+
+public static void main(String[] args);
+
+Accessspecifier returntype methodName(arguments);
+
+
+
+
+Facebook
+
+Post status
+Everyone-->Public
+Only me--> Private
+Friends-->default
+Friends of Friends-->protected
