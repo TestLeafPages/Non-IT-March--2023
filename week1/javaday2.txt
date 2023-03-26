@@ -1,0 +1,52 @@
+Today's Agenda
+==============
+8.45 to 9.15       Recap
+9.15 to 9.45       operators
+9.45 to 10.45 	   Conditional statement
+10.45 to 11.05	   Classroom
+11.05 to 11.15     Break
+11.15 to 12.15	   Looping statement
+12.15 to 12.35     classroom
+12.35 to 12.50     Jump statement
+12.50  to 1.10	   Quiz/Recap
+
+Operators
+
++,-,* / -->arithmetic operators
+to get the remainder -->%  -->modulus -->mod operator
+logical Operators
+
+&& -->And--> both condition to be true
+||-->Or-->any one condition is true
+
+Comparision operator-->boolean -true/false
+==
+<
+>
+!=
+=>
+=<
+unary operator
+=============
+++ -->increment ->+1 
+-- --->decrement->-1
+post /pre
+25 -->+1 
+x++
+++x
+
+Control Statements
+
+Decisionmaking /Selection
+==========================
+
+if else
+switch case
+
+Iteration/Looping statement 
+===========================
+for(start,range,incrementop)
+print 30 to 40
+
+for(30,40, 30++){
+}
