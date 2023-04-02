@@ -1,0 +1,71 @@
+Saturday's Agenda
+==============
+8.45  to 9.00am    Recap of Week 1
+9.00  to 10.00am   Selenium Introduction/launch a browser
+10.00 to 10.15am   Classroom
+10.15 to 10.30am   Break
+10.30 to 11.45am   Selenium Html tags and Locators
+11.45 to 12.10pm   Classroom
+12.10 to 12.45pm   Dropdown
+12.45 to 1.00pm    classroom
+1.00  to 1.10pm    Recap
+
+====================
+Selenium
+--------
+  ->web automation tool/framework
+  ->Web Application
+  
+  QTP-->Quick Test Professional -->commercial tool
+    -->Mercury/HP
+	
+	-->Selenium-->Jason Huggins
+	
+	
+	w3c -->world wide Consotorium
+	
+	Selenium script ---->  request-->    ChromeDriver-->    request          -->Chrome
+	Java            <---response               API call              <---response
+						(application prog interface)
+						
+						
+	To work with selenium 
+	Selenium Library wrt language
+	ChromeDriver
+	Chromebrowser
+	
+	HTML ->hypertext markup languauge
+	
+	DOM->Document Object Model -->Right click on the webelement and click on inspect
+	
+	<html> -->html tag
+	
+	<a> -->linkText -->a->anchor
+	
+	Locators
+	========
+	Basic locator
+	id          Most prefered -->unique -->numbers
+	name		
+	className
+	linkText
+	partialLinkText
+	tagname
+	xpath
+	Css
+	
+	
+	Select tag-->dropdown element
+	
+	locate and click on the element 
+	choose the options
+	
+	
+	Select class-->to handle the dropdown element 
+	Select obj=new Select(WebElement)
+	
+	3 methods which supports to choose the option from the drop down
+	
+	selectByIndex(int) -->starts from zero
+	selectByVisibleText("string")-->blacktext as input
+	selectByValue("String")  -->takes input from the value attribute in option tag

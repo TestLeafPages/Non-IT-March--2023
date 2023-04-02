@@ -1,0 +1,162 @@
+Sunday's Agenda
+===============
+8.45 to 9.00am    Recap of day1/doubts
+9.00 to 10.45am   Basic Xpath
+10.45 to 11.10am  Classroom
+11.10 to 11.25pm  Break 
+11.25 to 12.40pm  Advanced Xpath
+12.40 to 1.00pm   Classroom
+1.00  to 1.15pm   Recap
+------------------------------------------------------
+
+Locators
+=========
+id
+name
+classname
+linktext
+Partiallinktext
+Xpath
+Tagname
+
+BrowserVerification
+-getTitle(); -->it is dealing browser level
+   
+Element Verification
+
+-getText()   -->fetch the text from the dom of the respective webelement(black color)
+-getAttribute("value") -->fetch the typed text from the application(which is given by user)
+-getAttribute("value of Attribute")-->fetch the value from the dom of the respective element attribute  
+    id, class, type, for   
+========================
+
+Xpath
+-----
+  Xml Path
+  address to the element
+  
+When to use Xpath
+if locators are not stable/numbers / duplicated/ having whitespaces
+   
+ Two ways to locate the element usng xpath   
+   
+Absolute xpath-->lots of stops (Not a recommended xpath)
+-------------
+starts with / and with root element of DOM
+xpath index starts with 1
+/html/body/div[2]/div[2]/div/form/p/input
+===============================================
+Relative xpath-->point to point
+ -----------
+ starts with // tagname -->node of the required webelement
+ syntax :
+ //tagname
+ Types of Relative xpath:
+ =======================
+ Basic XPath
+ 1.Attribute based xpath
+ ------------------------
+ syntax:
+ //tagname[@attribute='attribute Value']
+ using id:
+ //input[@id='password']
+ 
+2.Text based xapth
+--------------------
+syntax:
+//tagname[text()='text value(black color)']
+//a[text()='beauty advice'] (nykaa app)
+//span[text()='FIND FOOD']
+
+3.Partial Attribute based xpath
+-------------------------------
+syntax:
+//tagname[contains(@attribute,'partial attributeValue']
+//input[contains(@id,'sern')](leaftaps -username)
+   
+4.Partial Textbased xpath:
+-------------------------
+syntax:
+//tagname[contains(text(),'partial text value(black text)']  
+//a[contains(text(),'CRM')]
+
+5.Collection based Xpath:
+-------------------------
+(Relative xpath)[index]  ->index starts with 1 to 5
+
+
+===================================================
+
+Advanced Xpath:(Axes Xpath)
+--------------
+  Relationship between two elements
+  
+  GrandParents
+  Parent
+  Children(Sibling)
+  Cousin
+  
+  
+Parent to child:
+---------------
+Syntax:
+(relative xapth of Parent)/tagname of Child (optional-relative xpath)
+
+//form/p
+//p/input[@id='username']
+
+Child to Parent:
+---------------
+Syntax:
+(realtive xpath of child)/parent::tagname of parent
+//label[@for='username']/parent::p
+//label[@for='username']/..
+
+Grandparent to GrandChild
+-------------------------
+syntax:
+(relative xpath of GrandParent)//tagname of child
+//form//input
+
+GrandChild to GrandParent
+---------------------------
+syntax
+(relative xpath of GrandChild)/../..
+(relative xpath of GrandChild)/ancestor::tagname of GrandParent
+
+//input/../..
+//input/ancestor::div
+
+==================================
+Sibling xpath
+----------
+Two ways
+
+Elder to Younger
+----------------
+(relative xpath)/following-sibling::tagname of younger
+//p[@class='top']/following-sibling::p
+
+Younger to Elder
+-----------------
+
+(relative xpath of younger)/preceding-sibling::tagname of elder
+ 
+ //input[@id='username']/preceding-sibling::label
+ 
+============================
+Cousin
+------
+Elder to younger
+===============
+(relative xpath of Elder)/following::tagname of younger
+(//label[text()='Username']/following::input)[3]
+
+Younger to elder
+----------------
+(relative xpath of younger)/preceding::tagname of elder
+//input[@class='decorativeSubmit']/preceding::input
+   
+   
+   
+
