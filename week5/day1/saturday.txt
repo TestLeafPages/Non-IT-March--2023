@@ -1,0 +1,184 @@
+Agenda for Today:
+=================
+  
+   09:00 to 09:40->TestNG Introduction
+   09:45 to 10:10->Breakout
+   10:10 to 10:30->Sequential Execution
+   10:45 to 11:15->Breakout+Break
+   11:15 to 11:35->Parallel Execution
+   11:50 to 12:10->Breakout+Break
+   11:55 to 12:35->TestNG Annotations
+   12:35 to 01:05->Breakout
+   01:05 to 01:15->Recap
+
+
+
+TestNG Framework
+===================
+Full form---Test NEXT GENERATION
+Test Execution Framework
+   --support only java programming language
+   
+   -Cedric
+
+   how TestNG come?
+   combination of 'j'Unit & 'n'Unit
+'j'Unit-----> java
+'n'Unit----->.net
+
+j-Unit
+
+   why we going to framework?
+
+
+Limitations:
+===========
+   1)One by One  (1000 testcase)
+       -Time Consuming 
+       -Same data
+       -Manually someone have to be present
+    
+     Requirement:
+        -Run automatedly-Sequential,Parallel
+
+   2)Run for hardcoded data 
+
+       Requirement: 
+        -run for different data
+   
+   3)There is no reporting
+
+      Requirement:
+        -Atleast basic reporting (passes,failed,skipped)
+		
+   4)There is no way to filter the tests to run -Groups
+     Requirement:
+        -Group the desired testcases 
+
+   5)There is no way to rerun the failed testcases 
+     Requirement:
+        Automated retry
+		
+
+
+
+  Steps to run as testng:
+  ============================
+  1.Convert the main method to a normal method
+     -remove static
+     -remove arguments
+     -give meaningful name for the method
+  2.Add @Test on the top of the method
+     - import from org.testng.annotations
+  3.Right click on the class run as->TestNG Test     
+
+
+Steps to run the testcases sequentially and parellely:
+  1.Select the converted testcases 
+  2.Right click -> TestNg -> Convert to TestNG
+  3.testng.xml will be generated under the project
+  4.Open the testng.xml file and click source tab
+  5.From the xml file -> Right Click-> Run as testng suite
+  6.Add attribute verbose to get the failure logs in the console
+  7.To get the reports
+     -After running the testcases
+     -Right click on the Project->Refresh
+     -Click test-output folder
+     -Right click index.html and Open with system editor 
+  8.To run the testcase parallely
+     -In the xml file add parallel attribute
+     -Give thread-count to set the max limit for the number of threads to be executed parallely.
+
+
+
+  Annotations:
+
+@BeforeSuite - start report
+
+   @BeforeTest - Connecting to database 
+
+		@BeforeClass - TC name, desc, author
+			
+			@BeforeMethod - Launch browser and login---perconditin(common al testcase)
+					
+               @Test (mandatory)
+
+			@AfterMethod - post conditon-Close browser
+
+		@AfterClass
+	@AfterTest - Disconnecting database
+@AfterSuite - stop report
+
+@Test- mandatory
+
+other annotation- optional one 
+
+
+
+
+Steps:
+  1.Create a BaseClass
+    - create preCondition() and annotate with @BeforeMethod
+       (Login steps)
+       Declare ChromeDriver driver globally and remove the local declaration
+    - create postCondition() and annotate with @AfterMethod
+        (close the browser)
+  2.All the testcases should extend BaseClass      
+  2.Run from the xml file and confirm
+
+
+step1
+beforeSuite
+beforeTest
+beforeClass
+beforeMethod
+CreateLead Run-@
+editLead run-@
+afterMethod
+afterClass
+afterTest
+aftersuite
+
+
+step2
+beforeSuite
+beforeTest
+beforeClass
+beforeMethod
+CreateLead Run-@
+afterMethod
+afterClass
+afterTest
+aftersuite
+
+beforeSuite
+beforeTest
+beforeClass
+beforeMethod
+editLead run-@
+afterMethod
+afterClass
+afterTest
+aftersuite
+
+
+step3
+beforeSuite
+beforeTest
+beforeClass
+beforeMethod
+CreateLead Run-@
+afterMethod
+
+beforeMethod
+editLead run-@
+afterMethod
+
+beforeMethod
+deleteLead run-@
+afterMethod
+
+afterClass
+afterTest
+aftersuite
+
