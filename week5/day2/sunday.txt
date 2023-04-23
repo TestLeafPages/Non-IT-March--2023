@@ -1,0 +1,55 @@
+Agenda for Today:
+=================
+  
+   09:00 to 10:00->TestNG Attributes
+   10:05 to 10:35->Breakout+Break
+   10:35 to 11:10->Static Parameterization
+   11:10 to 11:40->Breakout
+   11:40 to 12:30->DataProvider
+   12:30 to 01:00->Breakout
+   01:00 to 01:10->Quiz
+   
+Classroom:
+   1.Ignore DeleteLead from Execution using the attribute
+      -Check whether DeleteLead got ignored 
+   2.Execute CreateLead 2 times setting timeOut as 7000
+   3.Set dependency between editLead and CreateLead
+4.convert tc in xml 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Static Parameterization:
+   1.Identify the common set of data for all the testcases(leaftaps)
+       -url,username,password
+   2.In the xml file add parametertag under suite tag 
+        -<parameter name="" value=""></parameter>
+   3.Use @Parameters on the top of the method where you have hardcoded the static data
+        -Note: import from testng.annotations
+   4.Within @Parameters({"","",""})
+       -The name should exactly match as in the xml file
+       -But the order matters
+   5.Pass all the inputs  required for the method as arguments 
+   6.Replace all the hardcoded data with the input arguments.
+
+
+   DataProvider:
+   Step:1  Create a normal method with return type of String[][]  
+   Step:2  Declare and assign the value to the 2D Dimensional array  
+   Step:3  Add @DataProvider  annotation on top of the method  
+   Step:4  Add dataProvider  attribute the @Test Method  
+   Step:5  Add arguments to @test method to pass data from the DataProvider  Method
