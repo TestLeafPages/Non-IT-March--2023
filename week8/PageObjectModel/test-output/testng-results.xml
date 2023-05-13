@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-05-13T13:13:43 IST" name="Suite" finished-at="2023-05-13T13:15:28 IST" duration-ms="105371">
+    <groups>
+    </groups>
+    <test started-at="2023-05-13T13:13:43 IST" name="Test" finished-at="2023-05-13T13:15:28 IST" duration-ms="105371">
+      <class name="testcases.CreateLead">
+        <test-method is-config="true" signature="setData()[pri:0, instance:testcases.CreateLead@1c7696c6]" started-at="2023-05-13T13:13:43 IST" name="setData" finished-at="2023-05-13T13:13:43 IST" duration-ms="24" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setData -->
+        <test-method is-config="true" signature="preCOndition(java.lang.String)[pri:0, instance:testcases.CreateLead@1c7696c6]" started-at="2023-05-13T13:13:48 IST" name="preCOndition" finished-at="2023-05-13T13:14:02 IST" duration-ms="14570" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preCOndition -->
+        <test-method signature="runCreate(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcases.CreateLead@1c7696c6]" started-at="2023-05-13T13:14:02 IST" name="runCreate" data-provider="fetchData" finished-at="2023-05-13T13:14:28 IST" duration-ms="25996" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Testleaf]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Vinoth]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[S]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[99]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runCreate -->
+        <test-method is-config="true" signature="postCondition()[pri:0, instance:testcases.CreateLead@1c7696c6]" started-at="2023-05-13T13:14:28 IST" name="postCondition" finished-at="2023-05-13T13:14:29 IST" duration-ms="693" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postCondition -->
+        <test-method is-config="true" signature="preCOndition(java.lang.String)[pri:0, instance:testcases.CreateLead@1c7696c6]" started-at="2023-05-13T13:14:29 IST" name="preCOndition" finished-at="2023-05-13T13:14:41 IST" duration-ms="12370" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preCOndition -->
+        <test-method signature="runCreate(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcases.CreateLead@1c7696c6]" started-at="2023-05-13T13:14:41 IST" name="runCreate" data-provider="fetchData" finished-at="2023-05-13T13:14:59 IST" duration-ms="17596" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Wipro]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Keerthana]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[M]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[99]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runCreate -->
+        <test-method is-config="true" signature="postCondition()[pri:0, instance:testcases.CreateLead@1c7696c6]" started-at="2023-05-13T13:14:59 IST" name="postCondition" finished-at="2023-05-13T13:15:00 IST" duration-ms="671" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postCondition -->
+        <test-method is-config="true" signature="preCOndition(java.lang.String)[pri:0, instance:testcases.CreateLead@1c7696c6]" started-at="2023-05-13T13:15:00 IST" name="preCOndition" finished-at="2023-05-13T13:15:09 IST" duration-ms="9913" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preCOndition -->
+        <test-method signature="runCreate(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcases.CreateLead@1c7696c6]" started-at="2023-05-13T13:15:09 IST" name="runCreate" data-provider="fetchData" finished-at="2023-05-13T13:15:28 IST" duration-ms="18240" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[TCS]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Booma]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Devi]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[91]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runCreate -->
+        <test-method is-config="true" signature="postCondition()[pri:0, instance:testcases.CreateLead@1c7696c6]" started-at="2023-05-13T13:15:28 IST" name="postCondition" finished-at="2023-05-13T13:15:28 IST" duration-ms="635" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postCondition -->
+      </class> <!-- testcases.CreateLead -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

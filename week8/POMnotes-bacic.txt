@@ -1,0 +1,193 @@
+Saturday's Agenda
+-----------------
+9.00  AM to 10.30 AM -Introduction to POM
+10.30 AM to 11.00 AM -Classroom 
+11.00 AM to 11.10 AM -Break
+11.10 AM to 11.50 AM -Parallel
+11.50 AM to 12.10 AM -Classroom
+12.10 PM to 12.40 PM -Excel Integration
+12.40 PM to 1.00  PM -classroom
+1.00  PM to 1.05  PM -Recap
+
+--------------------------------------
+
+Framework:
+----------
+     set of rules, Protocol
+	 
+	 Ease maintenance
+	 Standard structre/ Organised structure
+	 Quality product
+	 scalability
+	 
+POM -->Page Object Model
+------------------------
+   -->Design pattern ->not a framework
+   
+   
+   Url And Credentials
+   CRM/SFA  
+   
+Create Lead
+----------
+   6 pages   -->6 Java Classes
+   Login Page  
+   Welcome Page
+   MyHomePage
+   Leads Page
+   CreateLead Page
+   ViewLead
+ 
+Steps to implement PageObjectModel
+----------------------------------
+Create a new Project
+Add the dependencies required for the project(pom.xml)
+Selenium
+TestNg
+Apache POI
+
+Step: 1 
+    create 3 packages
+	  Base class-->commom implementation
+	  Pages -->navigation /flow of appln/module
+	  Testcases-->actual test to be executed
+	  
+Step:2
+   Create ProjectSpecificMethod class under base packages
+    Add Common steps -->launch browser, url,close browser (PreCondition and Post Condition Steps)
+	@BeforeMethod and @AfterMethod 
+Step:3
+  Create 6 java classes under pages 
+   LoginPage -->username,password,login button  
+   WelcomePage
+   MyHomePage
+   Leads Page
+   CreateLead Page
+   ViewLead
+Step:4
+  Create separate methods for each webelement in the coressponding webpage
+  
+Step:5 
+  Add return statement based on the navigation of the appln/module
+  
+Step:6
+  Create a Login class -->testcase for actual execution (@Test )
+ 
+ 
+ Parallel Execution:
+ -------------------
+ static should be removed ..so that allowing the driver to taken diff instances
+ To resolve this 
+ Create a parmetrized constructor for each page driver -->RemoteWebDriver
+ and this .driver=driver 
+ 
+ Cross browser testing:
+ ----------------------
+ 
+  
+Use differnt driver class to run in different browsers
+
+<parameter nmae="browser" value ="chrome">
+
+Base class:
+-----
+declare the driver as RemoteWebDriver
+@Parameters("browser")
+Pass the browser key to the method arg
+use if ele if to instantiate the browser specific driver
+
+
+To integrate the Testdata (Dynamic Parametrizaation)
+------------------------------------------------------
+
+Step:1
+ Create a package utils 
+Step:2
+ copy the exixting code(ReadExcel)
+Step:3
+ Create a folder data ->paste the createLead.xlsx
+Step:4
+ Under base package -->ProjectSpecificMethod-->@DataProvider method
+Step:5
+ Create a method in Testcase to set the value of filename-->method as setData and assign the filename
+Step:6
+ Assign the dataProvider attribute with DataProvider
+Step:7
+ Pass the test data as arg in @Test method
+Step:8
+ Remove the hardcoded data in the pages and pass the parameter to the method and sendKeys
+ 
+ 
+
+Classroom:1
+Click on the button Open with delay
+apply explicitWait->numberofWindowsTobe
+Get the title of second window
+Hint:
+WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10))
+		wait.until(ExpectedConditions.numberOfWindowsToBe(0));
+
+Classroom:
+Create a class College
+Create a instance variable as collegeName
+Create a static final variable as building fee
+Create a constructor (default)
+Create a parametrized constructor (collegeName, depart)
+
+
+Main method:
+Do call the default constructor to print the university-->constructor chaining
+pass the value to the parametrized constructor
+============================================
+Week11
+---------
+Classroom:
+============
+Pre-Steps:
+---------------
+- Create new maven project
+- Add necessary dependencies in pom.xml
+
+Implement POM for CreateLead using below steps
+Steps to implement Page Object Model:
+--------------------------------------
+1. Create necessary packages (base, pages, testcases)
+		base - to have BaseClass with common properties
+		pages - to have java classes for all the pages that we navigate in the application
+		testcases - to have all the java classes for each testcases
+		
+2. Create a BaseClass under base package
+		- with ChromeDriver as global variable with static
+		- with preCondition() and postCondition() with necessary code
+		- Apply @BeforeMethod for preCondition() and @AfterMethod for postCondition()
+3. Create java classes for each page that we navigate in the application
+			- 6 java classes under pages package
+4. All the pages java class should extends BaseClass
+5. Create methods for each actions / verifications in the repective pages java class with appropriate code for each actions and verifictions
+6. Apply return statement for all the methods in the pages
+	this -> Same page
+	new PageClass() -> for another page
+7. Create java class for each testcase under testcases package
+8. All the testcases java class should extends BaseClass
+
+
+Data Integration:
+-----------------
+1. Apache POI library -> Needs to be added into pom.xml (done)
+2. Test data in excel document (done)
+3. Program to read the data from excel (done)
+4. DataProvider to supply data to the testcase (done)
+5. Need a method to define the excel document name (setValue())
+
+
+Steps to Integrate Data:
+-------------------------
+1. Convert the normal method to parameterized method with String argument to receive input
+	and replace the hardcoded value with argument variable
+2. Create arguments in the @Test method
+		Number arguments should be same as the number of data we need for the testcase
+3. Create excel workbooks under data folder in the project	
+4. Copy the ReadExcelData.java and paste it under utils package
+5. Copy the DataProvider code and excelFileName variable and paste in BaseClass
+		- Correct the import statement for ReadExcelData (from utils package)
+6. Integrate DataProvider with testcase
